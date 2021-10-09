@@ -6,4 +6,5 @@ Planned modifications:
 
 - `C-a C-k`: kill entire line.
 - `M-_`: Redo.
+- `C-x k`: Hydra (each `k` press closing another tab).
 - Undo doesn't seem to work with `C-/`, only `C-x u`. I'll try to figure out why.
