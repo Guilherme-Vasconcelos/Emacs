@@ -2,9 +2,11 @@ This is a fork of https://github.com/VSCodeEmacs/Emacs/tree/8df69304a75d4a1a8689
 
 I intend on adding some modifications that I personally like.
 
-Planned modifications:
+Planned:
 
-- `C-a C-k`: kill entire line.
-- `M-_`: Redo.
-- `C-x k`: Hydra (each `k` press closing another tab).
-- Undo doesn't seem to work with `C-/`, only `C-x u`. I'll try to figure out why.
+- [ ] `M-_`: Redo.
+- [ ] `C-x k`: Hydra (each `k` press closing another tab).
+- [ ] `C-c <left / right>`: Change tabs (with hydra).
+- [ ] Undo doesn't seem to work with `C-/`, only `C-x u`. I'll try to figure out why.
+
+For modifications that have already been done, see [CHANGELOG.md](CHANGELOG.md).

@@ -648,7 +648,6 @@
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
         "dev": "tsc -watch -p ./",
-        "compile": "tsc -p ./",
         "package": "vsce package"
     },
     "devDependencies": {

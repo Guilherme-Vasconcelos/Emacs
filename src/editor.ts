@@ -84,14 +84,12 @@ export class Editor {
 			await vscode.commands.executeCommand("cursorMove", { to: "wrappedLineStart" })
 		}
 
-		let endPos = this.getCurrentPos(),
-			range = new vscode.Range(startPos, endPos),
-			txt = vscode.window.activeTextEditor.document.getText(range)
+		let endPos = this.getCurrentPos();
 
-		// If there is something other than whitespace in the selection, we do not cut the EOL too
-		if (!isOnLastLine && !txt.match(/^\s*$/)) {
-			await vscode.commands.executeCommand("cursorMove", {to: "left", by: "character"})
-			endPos = this.getCurrentPos()
+		// Prevent cutting EOL if current position is not the beginning of the line
+		if (!isOnLastLine && startPos.character !== 0) {
+			await vscode.commands.executeCommand("cursorMove", {to: "left", by: "character"});
+			endPos = this.getCurrentPos();
 		}
 
 		// Select it now, cut the selection, remember the position in case of multiple cuts from same spot
