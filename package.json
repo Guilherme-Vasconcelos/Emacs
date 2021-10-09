@@ -642,6 +642,11 @@
                 "mac": "cmd+backspace",
                 "command": "deleteWordLeft",
                 "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "alt+shift+-",
+                "command": "emacs.M-_",
+                "when": "editorTextFocus && !editorReadonly"
             }
         ]
     },

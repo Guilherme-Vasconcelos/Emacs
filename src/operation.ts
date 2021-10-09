@@ -34,6 +34,10 @@ export class Operation {
                 this.editor.undo();
                 this.editor.setStatusBarMessage("Undo!");
             },
+            "M-_": () => {
+                this.editor.redo();
+                this.editor.setStatusBarMessage("Redo!");
+            },
             'C-j': () => {
                 this.editor.breakLine();
             },
